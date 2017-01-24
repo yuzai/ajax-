@@ -1,0 +1,43 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ajax通信测试</title>
+  <style>
+    .back{
+      padding:20px;
+      padding-left: 30%;
+      background-color: skyblue;
+    }
+  </style>
+  <script src = 'ajax2.js'>
+   </script>
+</head>
+
+<body>
+  <div class='back' id='div1'>
+    <h2>测试ajax功能</h2>
+    <p>先新建一个XMLHttpRequest()</p>
+    <p>创建一个新的HTTP请求,并指定该HTTP请求的方法、URL及验证信息</p>
+    <p>设置响应HTTP请求状态变化的函数</p>
+    <p>发送HTTP请求</p>
+    <p>获取异步调用返回的数据</p>
+    <p>使用JavaScript和DOM实现局部刷新</p>
+    <button id='test'>ajaxget</button>
+    <table>
+      <tr>
+        <td>account:</td>
+        <td><input type='text' id='account' placeholder="xiaobo"/><td>
+      </tr>
+      <tr>
+        <td>password:</td>
+        <td><input type='password' id='password' placeholder="*****"/><td>
+      </tr>
+    </table>
+    <button id='test2'>ajaxpost</button>
+  </div>
+  <script src = 'main.js'></script>
+</body>
+
+</html>
