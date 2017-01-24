@@ -4,11 +4,11 @@ var util = require('util');
 
 http.createServer(function(req,res){
   console.log(req.method);
-  if(req.method==='GET'){
+  if(req.method==='GET'){//处理get请求
       res.writeHead(200,{'content-Type':'text/plain',"Access-Control-Allow-Origin":"*"});
-      res.end(util.inspect(url.parse(req.url, true)));
+      res.end(util.inspect(url.parse(req.url, true)));//处理get请求，并将结果传递给客户端
   }
-  else{
+  else{//处理post请求
       // 定义了一个post变量，用于暂存请求体的信息
         var post = '';
 
