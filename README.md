@@ -1,6 +1,7 @@
 # ajax-
 自己封装了一个ajax函数，便于使用
 [demo](http://blog.xiaoboma.com/ajax-/)
+在测试的时候时候需要在本地运行example/js-server中的server,js.    node server.js会在本地建立一个服务器，监听3000端口，demo中的代码直接向该服务器发送请求。所以需要在服务器运行的情况下进行测试。
 
 # 使用方法
 1. 引入ajax2.js文件，该文件中定义了一个Ajax对象
