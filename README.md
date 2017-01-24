@@ -18,6 +18,7 @@ var ajax = new Ajax({
   },
   data: data//需要传递的数据
 })
+ajax.send();
 ```
 其中，data直接传递object即可，当get请求的时候内部会将data作为data添加到url后面，当是post请求的时候会将data转为JSON传递。
 # 兼容性
