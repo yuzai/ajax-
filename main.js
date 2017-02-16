@@ -16,7 +16,11 @@
       },
       data: data//需要传递的数据
     });
-    ajax.send();//发送ajax请求
+    try{
+      ajax.send();//发送ajax请求
+    }catch(e){
+    	alert('本地服务器未开启，请运行node server.js');
+    }
   }
   button2.onclick = function(){
     var data = {

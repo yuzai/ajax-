@@ -11,8 +11,12 @@ Ajax.prototype.send = function(method,url,callback,data){
   var callback = callback || this.callback;
   var xhr = new XMLHttpRequest();//新建ajax请求，不兼容IE7以下
   xhr.onreadystatechange = function(){//注册回调函数
-    if(xhr.readyState === 4)
-      callback(xhr.responseText);
+    if(xhr.readyState === 4){
+      if(xhr.status === 200)
+        callback(xhr.responseText);
+      else
+      	alert('服务器未打开，请运行node server.js');
+    }
   }
   if(method === 'get'){//如果是get方法，需要把data中的数据转化作为url传递给服务器
     if(typeof data === 'object'){
