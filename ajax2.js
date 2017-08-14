@@ -36,6 +36,6 @@ Ajax.prototype.send = function(method,url,callback,data){
       xhr.send(JSON.stringify(data));//发送的数据需要转化成JSON格式
   }else {
     console.log('不识别的方法:'+method);
-    return fasle;
+    return false;
   }
 }
