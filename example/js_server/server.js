@@ -15,7 +15,8 @@ http.createServer(function(req,res){
   }
   else if(req.method === 'OPTIONS'){
   	res.writeHead(200,{'content-Type':'text/plain',"Access-Control-Allow-Origin":null,'Access-Control-Allow-Methods': 'GET, POST, PUT','Access-Control-Allow-Headers':'If-Modified-Since',
-      	'Set-Cookie':'myCookie="type=ninja",language="javascript";Expires = '+timeObj,'Access-Control-Allow-Credentials':true});
+      	'Set-Cookie':'myCookie="type=ninja",language="javascript";Expires = '+timeObj,'Access-Control-Allow-Credentials':true,
+        'Access-Control-Allow-Headers':'content-type'});
       res.end();//处理get请求，并将结果传递给客户端
   }
   else{//处理post请求
@@ -29,6 +30,7 @@ http.createServer(function(req,res){
 
         // 在end事件触发后然后向客户端返回。
         req.on('end', function(){
+            console.log(post);
             post = JSON.parse(post);
             console.log(post);
             res.writeHead(200,{'content-Type':'text/plain',"Access-Control-Allow-Origin":"null",'Set-Cookie':'myCookie="type=ninja"','Access-Control-Allow-Credentials':true});
