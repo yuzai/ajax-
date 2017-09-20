@@ -33,7 +33,7 @@ Ajax.prototype.send = function(method,url,callback,data){
   }else if(method === 'post'){//如果是post，需要在头中添加content-type说明
       xhr.open(method,url,true);
       xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
-      xhr.send(JSON.stringify(data));//发送的数据需要转化成JSON格式
+      xhr.send(data);//发送的数据需要转化成JSON格式
   }else {
     console.log('不识别的方法:'+method);
     return false;
