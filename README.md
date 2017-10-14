@@ -26,8 +26,8 @@ ajax.send();
 
 # 测试
 其实ajax本身不难，但是学的时候感觉很吃力，为什么，我认为主要原因在于没有服务器端代码，这里我提供了一个我自己写的十分简单的服务器端代码，在
-example/js_server中，在命令行执行node server.js即可运行服务器，监听http://localhost://3000。运行example测试的时候，需要在本地运行服务器端的代码，在ajax通信
-的时候将url设定为http://localhost://3000即可。
+example/js_server中，在命令行执行node server.js即可运行服务器，监听 http://localhost://3000。 运行example测试的时候，需要在本地运行服务器端的代码，在ajax通信
+的时候将url设定为 http://localhost://3000 即可。
 
 # 笔者相关介绍文章
 1. [原生javascript封装ajax](http://www.jianshu.com/p/4e1d2ee63da7)
